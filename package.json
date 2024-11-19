@@ -1,0 +1,21 @@
+{
+  "name": "cs_prog3_orm_2024_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "dev": "npx nodemon --exec ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.17.1",
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
+  }
+}
