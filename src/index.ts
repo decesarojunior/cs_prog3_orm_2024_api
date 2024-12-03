@@ -7,6 +7,11 @@ import 'reflect-metadata';
 
 const app = express(); //inicializa a constante app com o express
 app.use(express.json());//define o formato das mensagens
+//npm install cors@2.8.5
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
 
 app.use(routes); // defini o roteador para as requisições.
 
