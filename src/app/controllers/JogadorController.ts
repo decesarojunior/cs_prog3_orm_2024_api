@@ -27,7 +27,7 @@ class JogadorController {
         const repository = getRepository(Jogador);
 
         const lista = await repository.createQueryBuilder('tb_jogador').
-        innerJoinAndSelect("tb_jogador.endereco", "endereco").leftJoinAndSelect("tb_jogador.patentes", "patente").getMany();
+        innerJoinAndSelect("tb_jogador.endereco", "endereco").leftJoinAndSelect("tb_jogador.patentes", "patente").orderBy("tb_jogador.data_cadastro").getMany();
 
         return res.json(lista);
     }
