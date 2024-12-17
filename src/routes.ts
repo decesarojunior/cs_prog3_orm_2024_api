@@ -5,6 +5,7 @@ import PatenteController from './app/controllers/PatenteController';
 import LocalController from './app/controllers/LocalController';
 import ConfiguracaoController from './app/controllers/ConfiguracaoController';
 import ParametroController from './app/controllers/ParametroController';
+import RegraController from './app/controllers/RegraController';
 
 const router = Router(); // inicialização
 
@@ -44,5 +45,12 @@ router.get('/parametro/:codigo', ParametroController.find);
 router.get('/deleteparametro/:codigo', ParametroController.delete);
 router.post('/updateparametro/', ParametroController.update);
 router.post('/insertparametro/', ParametroController.store);
+
+
+router.get('/listregra', RegraController.list);
+router.get('/regra/:id', RegraController.find);
+router.get('/deleteregra/:id', RegraController.delete);
+router.post('/updateregra/', RegraController.update);
+router.post('/insertregra/', RegraController.store);
 
 export default router; // exportacao da variável router (assim ele fica disponível para ser importada)
